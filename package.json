@@ -1,36 +1,35 @@
 {
-	"name": "async-node-events",
-	"description": "Asynchronous Node EventEmitter",
-	"keywords": ["async", "events"],
-	"homepage": "http://github.com/joshuafcole/async-node-events",
-	"author": "Joshua Cole <joshuafcole@gmail.com>, David Ellis",
-	"version": "0.0.6",
-	"bugs": "https://github.com/joshuafcole/async-node-events/issues",
-	"repository": {
+  "name": "async-node-events",
+  "description": "Asynchronous Node EventEmitter",
+  "keywords": [
+    "async",
+    "events"
+  ],
+  "homepage": "http://github.com/joshuafcole/async-node-events",
+  "author": "Joshua Cole <joshuafcole@gmail.com>, David Ellis",
+  "version": "0.0.6",
+  "bugs": "https://github.com/joshuafcole/async-node-events/issues",
+  "repository": {
     "type": "git",
     "url": "git://github.com:joshuafcole/async-node-events.git"
-	},
-	"main": "./lib/async-node-events",
-	"dependencies": {
+  },
+  "main": "./lib/async-node-events",
+  "dependencies": {
     "is-async": "0.0.2"
-    },
-	"devDependencies": {
-		"nodeunit": "*",
-		"docco": "*",
-    "browserify": "*",
-		"uglify-js": "*",
-		"jscoverage": "https://github.com/dfellis/jscoverage/archive/master.tar.gz",
-    "complexity-report": "*",
-    "jshint": "*",
-    "tape": "*",
-    "coveralls": "*"
-	},
-	"engines": {
+  },
+  "devDependencies": {
+    "gulp": "^3.6.0",
+    "gulp-mocha": "^0.4.1",
+    "gulp-coverage": "^0.1.20",
+    "gulp-coverage-reporter": "git+ssh://git@github.com:joshuafcole/gulp-coverage-reporter.git#0.0.1",
+    "docco": "*"
+  },
+  "engines": {
     "node": ">=0.6"
-	},
-	"scripts": {
+  },
+  "scripts": {
     "jshint": "./test/jshint.sh",
-		"realpublish": "./prepublish.sh && npm publish",
-		"test": "npm run jshint && nodeunit ./test/test-node.js"
-	}
+    "realpublish": "./prepublish.sh && npm publish",
+    "test": "npm run jshint && nodeunit ./test/test-node.js"
+  }
 }
