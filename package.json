@@ -1,49 +1,36 @@
 {
-	"name": "async-cancelable-events",
-	"description": "Asynchronous cancelable (or not) EventEmitter-like object",
-	"keywords": ["async", "cancelable", "events"],
-	"homepage": "http://dfellis.github.com/async-cancelable-events",
-	"author": "David Ellis",
+	"name": "async-node-events",
+	"description": "Asynchronous Node EventEmitter",
+	"keywords": ["async", "events"],
+	"homepage": "http://github.com/joshuafcole/async-node-events",
+	"author": "Joshua Cole <joshuafcole@gmail.com>, David Ellis",
 	"version": "0.0.6",
-	"bugs": "https://github.com/dfellis/async-cancelable-events/issues",
+	"bugs": "https://github.com/joshuafcole/async-node-events/issues",
 	"repository": {
-		"type": "git",
-		"url": "git://github.com:dfellis/async-cancelable-events.git"
+    "type": "git",
+    "url": "git://github.com:joshuafcole/async-node-events.git"
 	},
-	"main": "./lib/async-cancelable-events",
+	"main": "./lib/async-node-events",
 	"dependencies": {
-        "is-async": "0.0.2"
+    "is-async": "0.0.2"
     },
 	"devDependencies": {
 		"nodeunit": "*",
 		"docco": "*",
-        "browserify": "*",
+    "browserify": "*",
 		"uglify-js": "*",
 		"jscoverage": "https://github.com/dfellis/jscoverage/archive/master.tar.gz",
-        "complexity-report": "*",
-        "jshint": "*",
-        "tape": "*",
-        "coveralls": "*"
+    "complexity-report": "*",
+    "jshint": "*",
+    "tape": "*",
+    "coveralls": "*"
 	},
 	"engines": {
-		"node": ">=0.6"
+    "node": ">=0.6"
 	},
 	"scripts": {
-        "jshint": "./test/jshint.sh",
+    "jshint": "./test/jshint.sh",
 		"realpublish": "./prepublish.sh && npm publish",
-		"test": "npm run jshint && nodeunit ./test/test-node.js",
-        "testbrowser": "tape ./test/test-browser.js"
-	},
-    "testling": {
-        "files": "test/test-browser.js",
-        "browsers": {
-            "ie": [ 9, 10 ],
-            "firefox": [ 14, 15, 16, 17, "nightly" ],
-            "chrome": [ 20, 21, 22, 23, "canary" ],
-            "safari": [ 6.0 ],
-            "opera": [ 11.0, "11.6", 12.0, "next" ],
-            "iphone": [ 6 ],
-            "ipad": [ 6 ]
-        }
-    }
+		"test": "npm run jshint && nodeunit ./test/test-node.js"
+	}
 }

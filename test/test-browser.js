@@ -1,5 +1,5 @@
 var tape = require('tape');
-var EventEmitter = require('../lib/async-cancelable-events');
+var EventEmitter = require('../lib/async-node-events');
 var tests = require('./test');
 tests.getEventEmitter(EventEmitter);
 

@@ -1,21 +1,22 @@
-# async-cancelable-events
+# async-node-events
 
-[![Build Status](https://travis-ci.org/dfellis/async-cancelable-events.png?branch=master)](https://travis-ci.org/dfellis/async-cancelable-events) [![Dependency Status](https://david-dm.org/dfellis/async-cancelable-events.png)](https://david-dm.org/dfellis/async-cancelable-events) [![Coverage Status](https://coveralls.io/repos/dfellis/async-cancelable-events/badge.png?branch=master)](https://coveralls.io/r/dfellis/async-cancelable-events?branch=master)
+An EventEmitter replacement that allows both asynchronous and synchronous emissions and handlers.
+This is entirely based off of and almost entirely written by @dfellis in his excellent
+[async-cancelable-events](https://github.com/dfellis/async-cancelable-events) module. This is purely
+a semantic change with some minor code revision. Even this README is primarily written by @dfellis.
 
-[![browser support](https://ci.testling.com/dfellis/async-cancelable-events.png)](https://ci.testling.com/dfellis/async-cancelable-events)
-
-An EventEmitter replacement that allows the library to make events cancelable by the event handlers and allows event handlers to be synchronous or asynchronous.
+All credit goes to @dfellis.
 
 ## Install
 
 ```sh
-npm install async-cancelable-events
+npm install async-node-events
 ```
 
 ## Usage
 
 ```js
-var EventEmitter = require('async-cancelable-events');
+var EventEmitter = require('async-node-events');
 var util = require('util');
 
 function MyEmittingObject() {
@@ -26,14 +27,17 @@ function MyEmittingObject() {
 util.inherits(MyEmittingObject, EventEmitter);
 ```
 
-The API is intented to be a mostly-drop-in replacement for Node.js' EventEmitter object, with a little bit of DOM Events and more asynchronicity sprinkled in.
+The API is intented to be a mostly-drop-in replacement for Node.js' EventEmitter object, except with support for node-styled async callbacks.
 
-The primary differences between the EventEmitter and async-cancelable-events are:
+The primary differences between the EventEmitter and async-node-events are:
 
-1. If the last argument passed into ``this.emit`` is a function, it is assumed to be a callback that accepts a boolean indicating whether to continue the event (``true``) or cancel it (``false``).
+1. If the last argument passed into ``this.emit`` is a function, it is assumed to be a callback that accepts accepts the typical (err, result) tuple.
 2. The ``.on`` and ``.once`` methods try to "guess" if the provided handler is synchronous or asynchronous (based on its argument length), or can be explicitly registered as synchronous or asynchronous with ``.onSync``, ``.onAsync``, ``.onceSync``, ``.onceAsync``.
-3. Passing the maximum number of listeners allowed will fire off a ``maxListenersPassed`` event with the event name and listener count as arguments. The warning the official ``EventEmitter`` prints is simply a listener for ``async-cancelable-events``, and can be disabled by running ``this.removeAllListeners('maxListenersPassed')`` just after the ``EventEmitter.call(this)`` listed above.
+3. Passing the maximum number of listeners allowed will fire off a ``maxListenersPassed`` event with the event name and listener count as arguments. The warning the official ``EventEmitter`` prints is simply a listener for ``async-node-events``, and can be disabled by running ``this.removeAllListeners('maxListenersPassed')`` just after the ``EventEmitter.call(this)`` listed above.
 4. The various method calls are chainable, so ``foo.on('bar', func1).on('baz', func2)`` is valid.
+
+The primary difference between async-cancelable-events and async-node-events is:
+1. The parameters of asynchronous callbacks use the node idiom of `callback(err:Error|Null, result:Any)` rather than `callback(continue:Boolean)`.
 
 ## License (MIT)
 

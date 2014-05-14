@@ -8,7 +8,7 @@
 
 ## Full hinting rules
 
-jshint --config test/jshint.json lib/async-cancelable-events.js test/*.js
+jshint --config test/jshint.json lib/async-node-events.js test/*.js
 
 HINT_RESULT=$?
 

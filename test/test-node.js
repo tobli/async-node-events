@@ -1,7 +1,7 @@
 var jscoverage = require('jscoverage');
 jscoverage.enableCoverage(true);
 var coveralls = require('coveralls');
-var EventEmitter = jscoverage.require(module, '../lib/async-cancelable-events');
+var EventEmitter = jscoverage.require(module, '../lib/async-node-events');
 var tests = require('./test');
 tests.getEventEmitter(EventEmitter);
 
