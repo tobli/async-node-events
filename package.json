@@ -18,6 +18,8 @@
     "is-async": "0.0.2"
   },
   "devDependencies": {
+    "chai": "^1.9.0",
+    "mocha": "^1.18.0",
     "gulp": "^3.6.0",
     "gulp-mocha": "^0.4.1",
     "gulp-coverage": "^0.1.20",
