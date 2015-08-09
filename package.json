@@ -23,7 +23,7 @@
     "gulp": "^3.6.0",
     "gulp-mocha": "^0.4.1",
     "gulp-coverage": "^0.1.20",
-    "gulp-coverage-reporter": "git+ssh://git@github.com:joshuafcole/gulp-coverage-reporter.git#0.0.1",
+    "gulp-coverage-reporter": "git+https://github.com/joshuafcole/gulp-coverage-reporter.git#0.0.1",
     "docco": "*"
   },
   "engines": {
