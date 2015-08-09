@@ -1,5 +1,9 @@
 # async-node-events
 
+This module is a fork of joshuafcole/async-node-events. It exists only to publish the unreleased revision 
+(#d32411f1f4) of async-node-events used by [Browsertime](http://www.browsertime.net) to npm in a different scope. This
+avoids a GitHub dependency when installing Browsertime. All credit goes to @joshuafcole and @dfellis.
+
 An EventEmitter replacement that allows both asynchronous and synchronous emissions and handlers.
 This is entirely based off of and almost entirely written by @dfellis in his excellent
 [async-cancelable-events](https://github.com/dfellis/async-cancelable-events) module. This is purely

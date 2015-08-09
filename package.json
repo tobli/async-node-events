@@ -1,17 +1,17 @@
 {
-  "name": "async-node-events",
+  "name": "@tobli/async-node-events",
   "description": "Asynchronous Node EventEmitter",
   "keywords": [
     "async",
     "events"
   ],
-  "homepage": "http://github.com/joshuafcole/async-node-events",
-  "author": "Joshua Cole <joshuafcole@gmail.com>, David Ellis",
-  "version": "0.0.6",
-  "bugs": "https://github.com/joshuafcole/async-node-events/issues",
+  "homepage": "http://github.com/tobli/async-node-events",
+  "author": "Tobias Lidskog <tobias@lidskog.se>, Joshua Cole <joshuafcole@gmail.com>, David Ellis",
+  "version": "0.0.1",
+  "bugs": "https://github.com/tobli/async-node-events/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com:joshuafcole/async-node-events.git"
+    "url": "git://github.com:tobli/async-node-events.git"
   },
   "main": "./lib/async-node-events",
   "dependencies": {
